@@ -1,0 +1,58 @@
+<!-- <main class="page-left-contorl"> -->
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="bg-dark col-auto col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between">
+            <div class="bg-dark p-2">
+                <a class="d-flex text-decoration-none mt-1 align-items-center text-white">
+
+                    <span class="fs-5 ms-3 d-none d-sm-inline">ATTENDENCE</span>
+                </a>
+                <ul class="nav nav-pills flex-column mt-4">
+                    <li class="nav-item py-2 py-sm-0">
+                        <a href="#" class="nav-link text-white"><fa-icon class="icons"
+                                [icon]="icons.faHome"></fa-icon><span
+                                class="fs-6 ms-3 d-none d-sm-inline">HOME</span></a>
+                    </li>
+
+                    <li class="nav-item py-2 py-sm-0">
+                        <a href="#" class="nav-link  text-white" [routerLink]="['/table']" aria-current="page">
+                            <fa-icon class="icons" [icon]="icons.faDashboard"></fa-icon> <span
+                                class="fs-6 ms-3 d-none d-sm-inline">Dashboard</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item py-2 py-sm-0">
+                        <a href="#" class="nav-link text-white"><fa-icon class="icons"
+                                [icon]="icons.faUser"></fa-icon><span
+                                class="fs-6 ms-3 d-none d-sm-inline">User</span></a>
+                    </li>
+
+
+                    <li class="nav-item py-2 py-sm-0">
+                        <a href="#" class="nav-link text-white" [routerLink]="['/apply']"><fa-icon class="icons"
+                                [icon]="icons.faReceipt"></fa-icon><span
+                                class="fs-6 ms-3 d-none d-sm-inline">Apply</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown-open">
+                <button class="btn border-none dropdown-toggle text-white" type="button" id="trigger-ID"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <fa-icon class="icons" [icon]="icons.faUser"></fa-icon><span
+                        class="mt-0 ms-1 d-none d-sm-inline">user</span></button>
+                <div class="dropdown-menu" aria-labelledby="trigger-ID">
+                    <button class="dropdown-item" href="#">settings</button>
+                    <button class="dropdown-item" href="#">profile</button>
+                </div>
+            </div>
+        </div>
+        <!-- content area -->
+        <div class="p-1">
+            <app-apply-f></app-apply-f>
+
+
+        </div>
+    </div>
+</div>
+<!-- </main> -->

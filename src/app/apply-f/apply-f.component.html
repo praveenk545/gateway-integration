@@ -1,0 +1,116 @@
+<div class="container-fluied">
+    <div class="d-flex justify-content-center">
+        <div class="bg-white shadow-lg border-1 rounded border-light ms-12 p-4 p-lg-3 w-50 mt-4">
+            <h3 class="text-center">gate-Way</h3>
+            <form class="row p-3" [formGroup]="s" (ngSubmit)="user()">
+                <div class="col-md-6 p-2">
+
+
+                    <input type="text" placeholder="FullName" class="form-control" formControlName="name"
+                        [ngClass]="{'is-invalid': (s.controls.name.touched || isTrySubmit)&& s.controls.name.errors }">
+                    <div *ngIf="(s.controls.name.touched ||isTrySubmit) && s.controls.name.errors"
+                        class="invalid-feedback">
+                        <div *ngIf="s.controls.name.errors['required']">
+                            Name is required
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 p-2">
+
+                    <input type="date" placeholder="*date" class="form-control" formControlName="date"
+                        [ngClass]="{'is-invalid': (s.controls.date.touched || isTrySubmit)&& s.controls.date.errors }">
+                    <div *ngIf="(s.controls.date.touched ||isTrySubmit) && s.controls.date.errors"
+                        class="invalid-feedback">
+                        <div *ngIf="s.controls.date.errors['required']">
+                            Amount is required
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-6 p-2">
+
+                    <input type="string" placeholder="Email" class="form-control" formControlName="Email"
+                        [ngClass]="{'is-invalid': (s.controls.Email.touched || isTrySubmit)&& s.controls.Email.errors }">
+                    <div *ngIf="(s.controls.Email.touched ||isTrySubmit) && s.controls.Email.errors"
+                        class="invalid-feedback">
+                        <div *ngIf="s.controls.Email.errors['required']">
+                            Email is required
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="row">
+                    <div class="col-md-6 m-1 p-2">
+                        <div class=""></div>
+                        <span class="bg-info rounded text-white fw-bold p-2 "
+                            [ngClass]="{'is-invalid': (s.controls.rad.touched || isTrySubmit)&& s.controls.rad.errors }">
+                            <input type="radio" class="m-1 p-2" name="rad" formControlName="rad" id=""
+                                value="RazorPay">Razor
+                            Pay</span>
+                        <span class="bg-primary rounded text-white fw-bold p-2 ms-1"><input type="radio" class="m-1"
+                                name="rad" id="" value="Stripe" formControlName="rad">Stripe
+                            Pay</span>
+                        <div *ngIf="(s.controls.rad.touched ||isTrySubmit) && s.controls.rad.errors"
+                            class="invalid-feedback">
+                            <div *ngIf="s.controls.rad.errors['required']">
+                                value is required
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <button type="submit" class="btn btn-info mt-2 text-white fw-bold"
+                    style="width: 80px;height: 50px;margin: 0 auto;background: linear-gradient(rgba(91, 91, 248, 0.811),rgb(61, 61, 235));">Buy</button>
+                <button type="button" class="btn btn-info mt-2 text-white fw-bold" (click)="pay()">RazorPay</button>
+            </form>
+
+            <!-- <ng-template #p>
+
+                <div class="p-3 bg-info">
+                    <div class="" *ngIf="p!"></div>
+                    <p>dkdkdkd</p>
+
+                </div>
+            </ng-template> -->
+        </div>
+
+
+        <ng-template>
+
+        </ng-template>
+
+
+
+        <!-- <div class=""></div>
+        <div class="overlay" *ngIf="!popup">
+            <div class="popup">
+                <h2>Here i am</h2>
+                <a class="close" (click)="popup = false">&times;</a>
+                <div class="content">
+                    you have selected this event
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="" [(ngModel)]="x"></div>
+        <div [ngSwitch]="x">
+            <ng-template [ngSwitchCase]="1">
+                <p>One</p>
+            </ng-template>
+        </div> -->
+
+
+    </div>
+    <!-- <div class="row">
+        <div class="d-flex justify-content-center">
+            <div class=" col-md-3 mt-5 card">
+                <div class="bg-info p-3 text-white">
+                    <span>sai</span>
+                    <p>Razor payment</p>
+                    <h4>$140.00</h4>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
